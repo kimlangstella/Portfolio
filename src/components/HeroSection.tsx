@@ -50,8 +50,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-4 max-w-xl text-pretty text-base/7 text-white/70 sm:text-lg/8">
-            Product designer & developer based in Phnom Penh. I craft clean,
-            elegant interfaces and build fast, accessible web experiences.
+            I bridge the gap between design and code. I specialize in UI/UX and Frontend Development
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -62,7 +61,7 @@ export default function Hero() {
               Contact me
             </Link>
             <Link
-              href="#works"
+              href="#work"
               className="rounded-xl border border-white/20 px-5 py-2.5 font-medium text-white hover:border-white/40"
             >
               My works
@@ -72,7 +71,7 @@ export default function Hero() {
           {/* social row (optional) */}
 <div className="mt-6 flex items-center gap-6 text-2xl text-white/70">
   <a
-    href="https://linkedin.com"
+    href="https://www.linkedin.com/in/kimlang-tieng-8925a02ab/"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:text-white transition-colors"
@@ -81,7 +80,7 @@ export default function Hero() {
   </a>
 
   <a
-    href="https://github.com"
+    href="https://github.com/kimlangstella"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:text-white transition-colors"
@@ -90,7 +89,7 @@ export default function Hero() {
   </a>
 
   <a
-    href="mailto:hello@example.com"
+    href="https://t.me/Kimlang_tieng21"
     className="hover:text-white transition-colors"
   >
     <MdEmail />

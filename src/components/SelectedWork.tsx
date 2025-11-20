@@ -3,14 +3,17 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
+import ImageAlbumModal from './ImageAlbumModal.';
 
 export type Project = {
   title: string;
-  summary: string;          // 1-sentence problem/approach
-  impact?: string;          // e.g. "+38% organic traffic"
-  image: string;            // /public path
-  href: string;             // link to case study
-  tags?: string[];          // SEO, Next.js, etc.
+  summary: string;
+  impact?: string;
+  image: string;
+  href: string;
+  tags?: string[];
+  gallery?: string[]; // optional album images
 };
 
 type Props = {
@@ -19,17 +22,37 @@ type Props = {
 };
 
 export default function SelectedWork({ heading = 'Selected Work', projects }: Props) {
+  const [openAlbum, setOpenAlbum] = useState(false);
+  const [currentGallery, setCurrentGallery] = useState<string[]>([]);
+
   return (
-    <section className="work" aria-labelledby="work-heading">
+    <section className="work" aria-labelledby="work-heading" id="work">
       <h2 id="work-heading" className="heading">{heading}</h2>
 
       <div className="grid">
         {projects.map((p) => (
           <article key={p.title} className="card">
-            <div className="thumb">
-              <Image src={p.image} alt={p.title} fill sizes="(max-width: 900px) 92vw, 33vw" />
+            {/* Thumbnail */}
+            <div
+              className="thumb cursor-pointer"
+              onClick={() => {
+                if (p.gallery?.length) {
+                  setCurrentGallery(p.gallery);
+                } else {
+                  setCurrentGallery([p.image]); // fallback: just main image
+                }
+                setOpenAlbum(true);
+              }}
+            >
+              <Image
+                src={p.image}
+                alt={p.title}
+                fill
+                sizes="(max-width: 900px) 92vw, 33vw"
+              />
             </div>
 
+            {/* Content */}
             <div className="content">
               <h3 className="title">{p.title}</h3>
               <p className="summary">{p.summary}</p>
@@ -42,20 +65,23 @@ export default function SelectedWork({ heading = 'Selected Work', projects }: Pr
                 </div>
               )}
 
-              <div className="meta">
-                {p.impact && <span className="impact">{p.impact}</span>}
-                <Link href={p.href} className="cta" aria-label={`View case study: ${p.title}`}>
-                  View Case Study →
-                </Link>
-              </div>
+              
             </div>
           </article>
         ))}
       </div>
 
+      {/* Album Modal */}
+      {openAlbum && (
+        <ImageAlbumModal
+          images={currentGallery}
+          onClose={() => setOpenAlbum(false)}
+        />
+      )}
+
       <style jsx>{`
         :global(:root) {
-          --bg: #1f2330;               /* matches your About section */
+          --bg: #1f2330;
           --ink: #ffffff;
           --muted: #c9ced8;
           --card: #252a39;
@@ -67,8 +93,6 @@ export default function SelectedWork({ heading = 'Selected Work', projects }: Pr
         .work {
           padding: clamp(2rem, 5vw, 4rem);
           background: var(--bg);
-          
-          
         }
 
         .heading {

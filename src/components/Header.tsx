@@ -75,7 +75,7 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="https://t.me/Kimlang_tieng21"
             className="ml-4 rounded-md bg-fuchsia-300 px-4 py-2 text-sm font-semibold text-[#1f2330] hover:bg-fuchsia-200 transition"
           >
             Contact
@@ -123,7 +123,7 @@ export function Navbar() {
               ))}
               <li>
                 <a
-                  href="#contact"
+                  href="https://t.me/Kimlang_tieng21"
                   onClick={() => setOpen(false)}
                   className="block px-6 py-4 text-center text-sm font-semibold text-[#1f2330] bg-fuchsia-300 hover:bg-fuchsia-200"
                 >
