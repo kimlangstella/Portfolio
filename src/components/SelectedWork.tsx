@@ -8,7 +8,6 @@ import ImageAlbumModal from './ImageAlbumModal.';
 
 export type Project = {
   title: string;
-  summary: string;
   impact?: string;
   image: string;
   href: string;
@@ -55,7 +54,6 @@ export default function SelectedWork({ heading = 'Selected Work', projects }: Pr
             {/* Content */}
             <div className="content">
               <h3 className="title">{p.title}</h3>
-              <p className="summary">{p.summary}</p>
 
               {(p.tags?.length ?? 0) > 0 && (
                 <div className="tags">
@@ -141,12 +139,6 @@ export default function SelectedWork({ heading = 'Selected Work', projects }: Pr
         .title {
           color: var(--ink);
           font-size: 1.1rem;
-          margin: 0;
-        }
-
-        .summary {
-          color: var(--muted);
-          line-height: 1.6;
           margin: 0;
         }
 

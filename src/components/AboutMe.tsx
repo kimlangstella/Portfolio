@@ -25,7 +25,9 @@ export default function AboutMe({
   bio,
 }: AboutMeProps) {
   const defaultBio = `
-I enjoy exploring challenges and transforming them into opportunities for improvement. Whether designing interfaces or coding systems, I focus on creating solutions that are user-friendly, scalable, and meaningful for real-world needs.
+I enjoy transforming real-world problems into user-centered digital solutions that balance business goals and user needs.
+
+With experience in interface design, web development, and system thinking, I focus on building scalable, intuitive, and meaningful digital products that improve user experience and support organizational growth.
   `.trim();
 
   // 2. Get the category names from the skillsByCategory object

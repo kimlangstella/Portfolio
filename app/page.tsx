@@ -5,14 +5,11 @@ import { Navbar } from "@/src/components/Header";
 import Hero from "@/src/components/HeroSection";
 import SelectedWork, { Project } from "@/src/components/SelectedWork";
 
-import Image from "next/image";
 
 export default function Home() {
   const projects: Project[] = [
     {
       title: "Chekromlek — Knowledge Sharing Platform",
-      summary:
-        "Checkromlek is a collaborative knowledge-sharing platform designed to empower students by connecting them with solutions to the problems they encounter in their studies and daily life.",
       image: "/website.png",
       href: "",
       tags: ["Userflow", "Sitemap", "Wireframe", "Website"],
@@ -24,9 +21,18 @@ export default function Home() {
       ],
     },
     {
+      title: "Product Management System",
+      image: "/cake.png",
+      href: "",
+      tags: ["Next Js", "Firebase", "Tailwind"],
+      gallery: [
+        "/cake.png",
+        "/cake1.png",
+        "/cake3.png",
+      ],
+    },
+    {
       title: "Recommanddatoin palce in cambodai",
-      summary:
-        "Explore Cambodia is a platform that helps people discover destinations across provinces, making it easier to find where they want to go",
       image: "/travel.png",
       href: "https://www.figma.com/design/2zRuPfffKHYZOhCDeX1rLF/Library?node-id=0-1&t=F3ttnOqYT9jDZl28-1",
       tags: ["Next js", "TypeScript", "Tailwind,"],
@@ -36,8 +42,6 @@ export default function Home() {
     
     {
       title: "Landing Page",
-      summary:
-        "Created for users who prefer exploring program details directly, without starting a chat.",
       impact: "Improves clarity + user choice",
       image: "/landing-page.png",
       href: "/work/blog-growth",
