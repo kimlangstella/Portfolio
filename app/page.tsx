@@ -9,7 +9,33 @@ import SelectedWork, { Project } from "@/src/components/SelectedWork";
 export default function Home() {
   const projects: Project[] = [
     {
+      title: "Explore Cambodia",
+      description: "A travel discovery platform that helps users find and explore hidden gems across Cambodia's provinces. Features a modern, responsive design with high-fidelity prototypes.",
+      image: "/travel.png",
+      href: "https://www.figma.com/design/2zRuPfffKHYZOhCDeX1rLF/Library?node-id=0-1&t=F3ttnOqYT9jDZl28-1",
+      tags: ["Next js", "TypeScript", "Tailwind"],
+      gallery: ["/place.png", "/place1.png", "/place2.png"],
+      demo: "",
+      github: "",
+    },
+    
+    {
+      title: "Digital Commerce Management System",
+      description: "A role-based admin dashboard designed to simplify product management, order tracking, and customer handling for an online store. Built to improve workflow efficiency and reduce manual operational tasks.",
+      image: "/cake.png",
+      href: "",
+      tags: ["Next.js", "Firebase", "Tailwind"],
+      gallery: [
+        "/cake.png",
+        "/cake1.png",
+        "/cake3.png",
+      ],
+      demo: "",
+      github: "",
+    },
+    {
       title: "Chekromlek — Knowledge Sharing Platform",
+      description: "A collaborative knowledge-sharing platform designed to empower students by connecting them with solutions to academic challenges through research-driven UI and community engagement.",
       image: "/website.png",
       href: "",
       tags: ["Userflow", "Sitemap", "Wireframe", "Website"],
@@ -19,34 +45,18 @@ export default function Home() {
         "/wireframe.png",
         "/website.png",
       ],
+      demo: "",
+      github: "",
     },
     {
-      title: "Product Management System",
-      image: "/cake.png",
-      href: "",
-      tags: ["Next Js", "Firebase", "Tailwind"],
-      gallery: [
-        "/cake.png",
-        "/cake1.png",
-        "/cake3.png",
-      ],
-    },
-    {
-      title: "Recommanddatoin palce in cambodai",
-      image: "/travel.png",
-      href: "https://www.figma.com/design/2zRuPfffKHYZOhCDeX1rLF/Library?node-id=0-1&t=F3ttnOqYT9jDZl28-1",
-      tags: ["Next js", "TypeScript", "Tailwind,"],
-      gallery: ["/place.png", "/place1.png", "/place2.png"],
-    },
-    
-    
-    {
-      title: "Landing Page",
-      impact: "Improves clarity + user choice",
+      title: "Creative Landing Page",
+      description: "A high-conversion landing page designed for program exploration, featuring smooth animations and a clear hierarchy to improve user choice and clarity.",
       image: "/landing-page.png",
       href: "/work/blog-growth",
       tags: ["User Experience", "Wordpress", "AIOSEO"],
       gallery: ["/landing-page.png", "/robotics.png", "/Ballet.png"],
+      demo: "",
+      github: "",
     },
   ];
   const education: EducationItem[] = [
@@ -129,36 +139,41 @@ export default function Home() {
     },
   ];
 
-  const skillsByCategory = {
-    Frontend: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React",
-      "Next.js",
-      "Storybook",
-      "Tailwind CSS",
-      "Responsive Design",
-      
-    ],
-    
-    "UX/UI": [
-      "User Research",
-      "User Flows",
-      "Interaction Design",
-      "Prototyping",
-      "Usability Testing",
-      "Visual Design",
-    ],
-    Tools: ["Version Control", "Figma", "WordPress","supabase", "Postman"],
-  };
+const skillsByCategory = {
+  Frontend: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Next.js",
+    "Tailwind CSS",
+    "Responsive Development",
+    "Component-based Development",
+  ],
+
+  "Product & UX": [
+    "UX/UI Design",
+    "User Flow Design",
+    "Interaction Design",
+    "Prototyping",
+    "Usability Testing",
+  ],
+
+  Tools: [
+    "Git & GitHub",
+    "Figma",
+    "WordPress (WooCommerce)",
+    "Firebase / Supabase",
+    "Postman",
+  ],
+};
   return (
     <div>
       <Navbar></Navbar>
       <Hero></Hero>
       <AboutMe
         name="Kimlang"
-        role="UX/UI Designer & Web Development"
+        role="Digital Product Developer | UX/UI & Frontend"
         mainPhoto="/image2.jpg"
         secondaryPhoto="/personal1.jpg"
         skillsByCategory={skillsByCategory}

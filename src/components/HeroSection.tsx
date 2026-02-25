@@ -50,12 +50,12 @@ export default function Hero() {
           </h1>
 
           <p className="mt-4 max-w-xl text-pretty text-base/7 text-white/70 sm:text-lg/8">
-            I bridge the gap between design and code. I specialize in UI/UX and Frontend Development
+            Digital product developer combining UX/UI design and frontend development to create intuitive and scalable solutions.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Link
-              href="#contact"
+              href="#https://t.me/Kimlang_tieng21"
               className="rounded-xl bg-fuchsia-300 px-5 py-2.5 font-medium text-[#1f2330] shadow hover:bg-fuchsia-200 focus:outline-none focus:ring-2 focus:ring-fuchsia-300/70"
             >
               Contact me
